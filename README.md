@@ -124,8 +124,11 @@ As well as [SOC fortress](https://github.com/socfortress/Wazuh-Rules) rules for 
 | **DET-012** | Event Log Clearing | [T1070.001](https://attack.mitre.org/techniques/T1070/001/) | Sysmon + Wazuh | Medium |
 | **DET-013** | Firewall Modification (Netsh) | [T1562.004](https://attack.mitre.org/techniques/T1562/004/) | Sysmon + Wazuh | Medium |
 | **DET-014** | Scheduled Task Creation | [T1053.005](https://attack.mitre.org/techniques/T1053/005/) | Sysmon + Wazuh | Medium |
+| **DET-015** | SSH backdoor created | [T1098.004](https://d3fend.mitre.org/offensive-technique/attack/T1098.004/), [T1021.004](https://attack.mitre.org/techniques/T1021/004/) | Sysmon + Wazuh | High |
+| **DET-016** | Kerberoasting | [T1558.003](https://attack.mitre.org/techniques/T1558/003/) | Windows Event Logs + Wazuh | High |
 
 ---
+
 
 ## Operations
 
@@ -142,7 +145,11 @@ See [Operations](Operations) for full red and blue team procedures with commands
 | 7 | PsExec execution | Wazuh 100016 |
 | 8 | PsExec pipe detection | Wazuh 100502 |
 | 9 | CertUtil download from staging server | Wazuh 100105 |
+| 10 | authorized_keys file modified | Wazuh 100602 |
+| 11 | Kerberoasting | Wazuh 100300 |
+
 ---
+
 
 ## Documentation
 
@@ -152,6 +159,7 @@ See [Operations](Operations) for full red and blue team procedures with commands
 | [Custom-Detection-Rules.md](Custom-Dection-Rules.md) | SPL queries, Wazuh rules, Snort rules, MITRE mappings |
 | [Operations.md](Operations) | Step-by-step attack procedures with expected detections |
 | [Troubleshooting.md](Troubleshooting.md) | Walk-through of troubleshooting log and lessons learnt |
+| [Automation](https://github.com/Pahoeh0e/SOC_Home_Lab/tree/main/Automation) | Python tools made for automation and SOC ease of use |
 
 ---
 
@@ -165,4 +173,4 @@ See [Operations](Operations) for full red and blue team procedures with commands
 
 ---
 
-**Last Updated**: August 2026
+**Last Updated**: September 2026
